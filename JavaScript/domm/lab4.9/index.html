@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 4.9</title>
+    <style>
+        .error {
+            color: red;
+            border-color: red;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text">
+        <button>Check</button>
+        <p class='hide error'>phone number is required</p>
+    </div>
+</body>
+
+<script>
+    const input = document.querySelector('input');
+    const btn = document.querySelector('button');
+    const text = document.querySelector('p');
+
+    btn.addEventListener('click', function () {
+        const value = input.value;
+        if (!value) {
+            input.classList.toggle('error');
+            text.classList.toggle('hide');
+            text.innerHTML = 'Phone Number is required';
+        }
+        else if (isNaN(value.trim())) {
+            input.classList.toggle('error');
+            text.classList.toggle('hide');
+            text.innerHTML = 'Phone Number is invalid';
+        }
+
+        else if (value.length !== 10) {
+            input.classList.toggle('error');
+            text.classList.toggle('hide');
+            text.innerHTML = 'Phone Number is invalid length';
+        }
+        else {
+            text.classList.toggle('hide');
+            alert('Valid Phone Number');
+        }
+    })
+
+    // btn.addEventListener('input', () => {
+    //     input.classList.remove('error');
+    // })
+
+
+
+</script>
+
+</html>

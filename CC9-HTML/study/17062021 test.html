@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .box{
+        float:left;
+        width: 200px;
+        height: 100px;
+        background:red;
+        text-align:center;
+    }
+
+    .row{
+    
+
+    /* ////overflow wil be clipped */
+
+
+        /* overflow:hidden; */
+        /* border: 1px solid; */
+        
+    }
+
+
+    /* same overflow hidden */
+    .row::after{
+
+        content:"";
+        clear:both;
+        display:table;
+
+    }
+
+    .logo{
+        float:left;
+        background-color:green;
+    }
+
+    nav {
+
+        float:right;
+        background:blue;
+    }
+
+    .main{
+        background:lightgray;
+        width: 70%;
+        float:left;
+
+    }
+
+    .sidebar{
+
+        background:lightcoral;
+        width:30%;
+        float:right;
+    }
+
+    .pic1 {
+        width:33.3%;
+        float:left;
+        /* padding:10px; */
+        background:lightgreen;
+        text-align:center;
+        
+    }
+
+    /* .pic2 {
+        /* width:50%;
+        float:left;
+        padding:10px;
+        
+    } */
+
+    .pic3 {
+        width:33.3%;
+        float:left;
+        /* padding:10px; */
+        background:lightsalmon;
+        text-align:center;
+        
+    }
+
+    .pic4 {
+        width:33.3%;
+        float:left;
+        /* padding:10px; */
+        background:lightgrey;
+        text-align:center;
+    }
+    .pic5 {
+
+        width:50%;
+        float:left;
+        /* padding:10px; */
+        background:lightgrey;
+        text-align:center;
+
+    }
+
+
+        
+    
+
+    img {
+        height: 200px;
+    }
+
+</style>
+<body>
+
+<!-- first bar -->
+<div class="row">
+    <div class="box">
+        <h1 class="welcome">HTML</h1>
+        <p>Welcome to HTML</p>
+    </div>
+
+    <div class="box">
+        <h1 class="welcome">HTML</h1>
+        <p>Welcome to HTML</p>
+    </div>
+
+    <div class="box">
+        <h1 class="welcome">HTML</h1>
+        <p>Welcome to HTML</p>
+    </div>
+
+    
+</div>
+
+<!-- second bar -->
+<div>
+<div class="logo">Logo</div>
+    <nav>-----nav------</nav>
+
+</div>
+<br>
+
+<!-- thrid bar -->
+<div class="main">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident reprehenderit corrupti hic deleniti reiciendis doloremque iste. Dolor veritatis inventore aspernatur?</p>
+
+</div>
+
+<div class="sidebar">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam modi eius laudantium aut voluptates culpa vero, molestias eos adipisci earum!</p>
+</div>
+
+<!-- fourth bar -->
+<div class="row" style="padding-top:100px;">
+<div class="pic1">
+    <img src="/pic/pexels-erik-mclean-4424133.jpg" alt="">
+
+</div>
+
+<!-- <div class="pic2">
+    <img src="/pic/pexels-ib-rama-5228016 (1).jpg" alt="">
+</div> -->
+
+<div class="pic3">
+    <img src="/pic/pexels-maria-orlova-4946626.jpg" alt="">
+
+</div>
+
+<div class="pic4">
+    <img src="/pic/pexels-zh-xrong-3733588.jpg" alt="">
+
+</div>
+</div>
+
+<!-- fifth bar -->
+
+<div class="row">
+    <div class="pic5">
+        <img src="/pic/pexels-erik-mclean-4424133.jpg" alt="">
+    </div>
+
+    <div class="boxforpic"></div>
+    <div class="pic6">
+        <img src="/pic/pexels-maria-orlova-4946626.jpg" alt="" style="width:25%;">
+
+    </div>
+
+
+</div>
+
+
+
+</body>
+</html>

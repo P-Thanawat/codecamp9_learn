@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSX</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+        // const nickName = 'John';
+        // const age = 27;
+
+        // const user = {
+        //     firstName: 'Thanawat',
+        //     lastName: 'Pi',
+        //     age: 35
+        // };
+
+        // const getFullName = user => `${user.firstName} ${user.lastName}`;
+
+        // const div = (
+        //     <h1>Hello World {getFullName(user)}</h1>
+        // );
+        // const style = {
+        //     border: '1px dashed pink',
+        //     fontSize: '48px',
+        //     color: 'cyan'
+        // }
+
+
+        // const element = (
+        //     <>
+        //     <div>test</div>
+        //     <div
+        //         id='container'
+        //         className='main-container'
+        //         style={{
+        //             color: 'red',
+        //             border: '1px solid green',
+        //             padding: '1rem',
+        //             backgroundColor: 'lightBlue',
+        //             margin: '0.5rem',
+        //         }}
+        //     >
+        //         <h1
+        //         classNmae='main-header'
+        //         style={style}
+        //         >Hello React</h1>
+        //         <p>React Lesson</p>
+        //         <label htmlFor="id">Input</label>
+        //         <input 
+        //         type="text" 
+        //         id="id" 
+        //         style={{margin:'10px'}}
+        //         />
+        //     </div>
+        //     </>
+        // );
+
+        const boo = true;
+        const nul = null;
+        const undefin = undefined;
+        const str = 'string';
+        const num = 10;
+        const obj = {
+            name: 'tom',
+            email: 'jerry@yahoo.com'
+        }
+
+        const element = <h1>{boo} {nul} {undefin} {str} {num}</h1>;
+
+
+        ReactDOM.render(element, document.getElementById("root"));
+    </script>
+</body>
+
+</html>

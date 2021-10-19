@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 3.2</title>
+</head>
+
+<body>
+    <script>
+        const ul = document.createElement('ul');
+        console.log(ul);
+        const body = document.body;
+        console.log(body);
+        body.append(ul);
+
+        while(1){
+            const text = prompt('Enter your text');
+            if (!text || !text.trim()) break;
+            const li = document.createElement('li');
+            li.innerHTML = text;
+            ul.append(li);
+        }
+
+    </script>
+</body>
+
+</html>

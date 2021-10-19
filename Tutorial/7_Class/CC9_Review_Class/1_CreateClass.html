@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="color:green">CLASS</h2>
+
+    <script>
+    //   OOP = Object Oreient Programming 
+    //  Class = create Instance Object (Blueprint)
+
+    // Instance Properties : what they have 
+    //  - name 
+    //  - age
+    //  - heigth
+    
+    // Instance Methods : what they do
+    //  - talk
+    //  - run
+    //  - jump
+
+    class Rectangle {
+
+        constructor (_width,_height,_color) {
+            // set up Object 
+            // console.log("The Rectangle is being created")
+
+            this.height = _height
+            this.width = _width
+            this.color = _color
+        }
+
+        getArea () {
+            return this.width * this.height
+        }
+
+        printDescription () {
+            console.log(`I am a rectangle of ${this.width} * ${this.height} and I am ${this.color}`)
+        }
+    }
+
+    let myRectangle1 = new Rectangle(10,5,'green')
+    console.log(myRectangle1.getArea())
+
+    let myRectangle2 = new Rectangle(9,7,'grey')
+    console.log(myRectangle2.getArea())
+
+    myRectangle1.printDescription()
+    myRectangle2.printDescription()
+
+    let myRectangle3 = new Rectangle(33,77,'orange')
+
+    //----------------- From RunJS
+    // Object Literal 
+    // const myObj = {} 
+    // console.log(myObj)
+
+    // myObj.name = "pavit"
+    // myObj.surname = "pimchanagul"
+    </script>
+</body>
+</html>

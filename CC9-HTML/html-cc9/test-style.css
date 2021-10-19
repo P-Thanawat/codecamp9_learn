@@ -1,0 +1,67 @@
+/* temp */
+
+section,
+header,
+footer {
+  outline: 1px dashed lime;
+}
+
+/* Global */
+h1,
+body {
+  margin: 0;
+}
+
+html {
+  background: darkgray;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+body {
+  max-width: 1200px;
+  background: lightblue;
+  margin: auto;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Header */
+
+header {
+  background: skyblue;
+  color: whitesmoke;
+  min-height: 70px;
+  padding-top: 30px;
+  border-bottom: 3px solid salmon;
+}
+
+header .branding {
+  float: left;
+}
+
+header nav {
+  float: right;
+  margin-top: 15px;
+}
+
+header ul {
+  list-style: none;
+}
+
+header li {
+  display: inline;
+  padding: 0 20px;
+}
+
+header a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: inherit;
+}

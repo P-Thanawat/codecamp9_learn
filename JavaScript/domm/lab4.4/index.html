@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 4.4</title>
+</head>
+
+<body>
+    <a href="https://www.google.com">Google</a>
+
+    <script>
+        const aTag = document.querySelector('a');
+        aTag.addEventListener('click', function (evnet) {
+            event.preventDefault();
+            const isConfirm = confirm('Leave for https://google.com?'); //true or false
+            if (isConfirm) {
+                location.href = 'https://www.google.com';
+                // location.assign('https://www.google.com');
+                // location.replace('https://www.google.com'); //cannot come back 
+            }
+        })
+    </script>
+</body>
+
+</html>

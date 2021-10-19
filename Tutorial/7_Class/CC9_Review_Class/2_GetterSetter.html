@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="color:green">CLASS</h2>
+
+    <script>
+        // Getters and Setters 
+
+        class Square {
+
+            constructor (_width) {
+                this.width = _width
+                this.height = _width
+                this.numOfRequestsForArea = 0
+            }
+            
+            get area(){
+                this.numOfRequestsForArea ++
+                return this.width * this.height
+            }
+
+            set area(area){
+                this.width = Math.sqrt(area)
+                this.height = this.width
+            }
+        }
+
+        let square1 = new Square(10)
+        
+        // Get
+        console.log(square1.area)
+        // Set
+        square1.area = 25
+        // Get Again
+        console.log(square1.area)
+        console.log(square1.area)
+        console.log(square1.area)
+        console.log(square1.area)
+        console.log(square1.area)
+
+// ---------------- From Runjs-------------------// Like Get
+
+// console.log(myObj)
+
+// const mySquare = {
+//   area : 25
+// }
+
+// console.log(mySquare.area)
+
+// // Like Set
+// const mySquare2 = {
+  
+// }
+
+// mySquare2.area = 100
+
+// console.log(mySquare2)
+    </script>
+</body>
+</html>

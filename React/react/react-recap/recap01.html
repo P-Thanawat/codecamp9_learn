@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="root"></div>
+    <script crossorigin src="./react.development.js"></script>
+    <script crossorigin src="./react-dom.development.js"></script>
+    <!-- Load Babel -->
+    <script src="./babel.min.js"></script>
+    <!-- Your custom script here -->
+    <script type="text/babel">
+
+        const d = new Date;
+
+        function MyDiv(props) {
+            console.log(props);
+            return (
+                <div className='mydiv' style={ {backgroundColor:props.color} }>
+                    <h1>Hello,World</h1>
+                    <p>Time: {d.toLocaleTimeString()}</p>
+                    <p>Your lucky number is <b>{Math.floor(Math.random() * 100)}</b></p>
+                    <img style={{ width: props.imgWidth }} src="https://images.pexels.com/photos/8594503/pexels-photo-8594503.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+                    <p>Have a wonderful day</p>
+                </div>
+            )
+        }
+
+        function App (){
+            return (
+                <div style={{display:'flex'}}>
+                <MyDiv color='lightGray' imgWidth='250px'/>
+                <MyDiv color='lightBlue' imgWidth='100px'/>
+                <MyDiv color='lightPink' imgWidth='150px'/>
+                </div>
+            )
+        }
+
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+
+
+</body>
+
+</html>

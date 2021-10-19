@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>component&props</title>
+    <style>
+        .greeting {
+            border: 1px dashed green;
+            padding: 1rem;
+            margin: 0.5rem;
+            background: light-blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- root -->
+    <div id="root">
+        <!-- <h1>Welcome My Friend</h1>
+        <div class="greeting">
+            <p>Hello, John</p>
+        </div>
+        <div class="greeting">
+            <p>Hello, Jack</p>
+        </div>
+        <div class="greeting">
+            <p>Hello, Jane</p>
+        </div> -->
+    </div>
+    <!-- React -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Javascript -->
+    <script type="text/babel">
+
+        function Greeting(props) {
+            console.log(props);
+            return (
+                <div className="greeting">
+                    <p>Hello, {props.name}</p>
+                </div>
+            )
+        }
+        // const element = (
+        //     <div>
+        //         <h1>Welcome My Friend</h1>
+        //         {Greeting({ name: 'John' })}
+        //         {Greeting({ name: 'Jack' })}
+        //         {Greeting({ name: 'Jane' })}
+        //     </div>
+        // );
+
+        const element = (
+            <div>
+                <h1>Welcome My Friend</h1>
+                <Greeting name='John' age='124' address='United State' />
+                <Greeting name='Orating' age='26' address='Moon' />
+                <Greeting name='Chels' age='24' address='Toronto' />
+            </div>
+        );
+
+        ReactDOM.render(element, document.getElementById('root'));
+    </script>
+</body>
+
+</html>

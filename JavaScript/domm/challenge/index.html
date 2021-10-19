@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challedge</title>
+    <style>
+        .inline {
+            display: inline-block;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <label for="">Expense</label>
+            <input type="text" class="expense">
+        </div>
+
+        <div>
+            <label for="">Amount</label>
+            <input type="text" class="amount">
+        </div>
+
+        <div>
+            <label for="">Date</label>
+            <input type="date" class="date">
+        </div>
+
+        <button class="add">Add</button>
+    </div>
+
+    <div class='data'>
+        <!-- <div> -->
+        <!-- <p class="toal">Total : </p>
+        <hr>
+        <p class="data" style="display:inline">empty</p>
+        <button class="edit">Edit</button>
+        <button class="del">Del</button> -->
+        <!-- </div> -->
+    </div>
+
+    <script>
+        function create(tag, innerHTML, className) {
+            const ele = document.createElement(tag);
+            if (innerHTML) {
+                ele.innerHTML = innerHTML;
+            }
+            if (className) {
+                ele.classList(className);
+            }
+            return ele;
+        }
+
+        const expense = document.querySelector('.expense');
+        const amount = document.querySelector('.amount');
+        const date = document.querySelector('.date');
+        const add = document.querySelector('.add');
+        const data = document.querySelector('.data');
+        // const total = document.querySelector('.total');
+        // const data = document.querySelector('.data');
+        // const edit = document.querySelector('.edit');
+        // const del = document.querySelector('.del');
+        add.addEventListener('click', function () {
+            const div = create('div');
+            data.append(div);
+            const currentExpense = expense.value;
+            const currentAmount = amount.value;
+            const currentDate = date.value;
+            const text = create('p', `${date.value} ${expense.value} ${amount.value}`);
+            console.log(data);
+            text.classList.add('inline');
+            div.append(text);
+
+            const edit = create('button', 'Edit');
+            div.append(edit);
+
+            const del = create('button', 'Del');
+            div.append(del);
+
+            del.addEventListener('click', function () {
+                del.parentElement.remove();
+                console.log(del.parentElement);
+            })
+
+            edit.addEventListener('click', function () {
+                expense.value = currentExpense;
+                amount.value = currentAmount;
+                date.value = currentDate;
+            })
+        })
+
+    </script>
+</body>
+
+</html>

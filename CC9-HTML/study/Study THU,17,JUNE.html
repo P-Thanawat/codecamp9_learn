@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .box{
+        /* write w400 and press tab */
+        width: 400px;
+        /* write h400 and press tab */
+        height: 300px;
+
+
+        background-color: red;
+        /* background: url(https://picsum.photos/1800); */
+
+        /* ////grayscale picture */
+        /* background: url(https://picsum.photos/1800?grayscale); */
+        
+        /* ////blur picture */
+        /* background: url(https://picsum.photos/1800?blur=8); */
+
+        /* ////blur and grayscale picutre */
+        background: url(https://picsum.photos/800?blur=8&grayscale);
+
+        /* ////background sizing */
+        /* ////contain picture (size should be bigger container) */
+
+        background-size: contain;
+        /* background-size: cover; */
+        background-repeat: no-repeat;
+
+
+        /* ////background-positioning */
+
+        /* background-position:50px 0px; */
+        background-size:top center;
+
+        /* ////Positioning */
+        /* static >> fixed position */
+        /* relative >> Can move to reposition though their block stwill be orginal position */
+        /* absolute >> subset in div can be used for icon or little things; its reference different relative but it can move freedomly similar; Good point is its block change to follow bt itselves;*/
+        /* fixed >> fixing position even you scroll position but it doesn't reverse block */
+        /* stick >> firstly it can be scroll until setting position then it will be fixed */
+
+
+        /* position: static; */
+        position: relative;
+        /* position:absolute; */
+        left: 30px;
+        top:1000px;
+        border: 3px solid #73AD21;
+        
+
+    }
+
+    .second{
+        position:absolute;
+        /* position: relative; */
+        
+        top: 0px;
+        right: 150px;
+        width: 100px;
+        height: 100px;
+        border: 3px solid #73AD21;
+
+    }
+
+    .third{
+        position:fixed;
+        /* position:relative; */
+        /* position:sticky; */
+        
+        
+    }
+
+    .fourth{
+        /* position: -webkit-sticky; */
+  position: sticky;
+  top: 0px;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+    }
+
+.box1 {
+        width: 200px;
+        height: 200px;
+        background-color:salmon;
+        text-align:center;
+        
+        
+        
+}
+
+.box2{
+        width: 200px;
+        height: 200px;
+        background-color:seagreen;
+        text-align:center;
+
+        position: absolute;
+        right:1000px;
+        top: 400px;
+
+        z-index: 2;
+}
+
+.box3{
+        width: 200px;
+        height: 200px;
+        background-color:tan;
+        text-align:center;
+
+        position: absolute;
+        top:500px;
+
+        z-index: -1;
+
+}
+
+.row{
+    height: 100px;
+    /* width: 100vw; */
+    background: red;
+    /* overflow:hidden; */
+
+
+
+
+}
+
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.logo{
+    background:lightblue;
+    /* display: inline-block; */
+    float: left;
+    /* float:right; */
+    position:relative;
+    top:85px;
+
+
+}
+
+nav{
+    background:blue;
+    float:right;
+}
+</style>
+<body>
+    <!-- write .dot and press tab -->
+    <div class="box">first
+        <div class="second">second</div>
+    </div>
+    <div class="third">thrid</div>
+
+    <div class="fourth">fourth</div>
+
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+
+    <div class="row">
+        <div class="logo">LOGO</div>
+        <nav>----nav----</nav>
+        <!-- <p>CodeCamp9</p> -->
+    </div>
+
+    <p>CodeCamp9</p>
+
+
+ 
+
+
+    <!-- write #picdox and press tab -->
+    <div id="picdox"></div>
+    <!-- write p.para1 and press tab -->
+    <p class="para1"></p>
+
+
+
+
+    
+</body>
+</html>

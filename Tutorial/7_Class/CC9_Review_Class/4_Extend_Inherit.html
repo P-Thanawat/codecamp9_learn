@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="color:green">CLASS</h2>
+
+    <script>
+        // Extends/Inheritance 
+        //  Class : Parent --> Child
+
+        // Parent
+        class Person {
+            constructor(_name,_age){
+                this.name = _name
+                this.age = _age
+            }
+
+            describe () {
+                console.log(`I am ${this.name} and I am ${this.age} years old.`)
+            }
+        }
+
+        // Child
+        class Programmers extends Person {
+            constructor (_name,_age,_yearsOfExperience) {
+               super(_name,_age)
+                this.yearsOfExperience = _yearsOfExperience
+
+            }
+
+            code (){
+                console.log(`${this.name} is coding`)
+            }
+
+
+            describe() {
+                console.log(`I am greatest programmer.`)
+            }
+        }
+
+
+
+        let person1 = new Person('jame',26)
+        let programmer1 = new Programmers('Gloa',25,3)
+
+        // person1.describe()
+        // programmer1.describe()
+
+        // programmer1.code()
+        // person1.code() // Uncaught
+
+        programmer1.describe()
+
+        const programmers = [
+            new Programmers("Bomb",23,1),
+            new Programmers("Mind",26,5),
+            new Programmers("Sun",20,2)
+        ] 
+
+        function developSoftware (programmers) {
+            // Develop Software
+            for(let programmer of programmers) {
+                programmer.code()
+            }
+
+        }
+
+        developSoftware(programmers)
+    </script>
+</body>
+</html>

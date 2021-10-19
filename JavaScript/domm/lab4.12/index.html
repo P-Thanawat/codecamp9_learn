@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 4.12</title>
+    <style>
+        button {
+            margin-left: 0.5rem;
+        }
+
+        ul {
+            padding: 0px;
+            margin: 1rem 0px;
+            list-style: none;
+        }
+
+        span {
+            display: inline-block;
+            width: 50%;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" class="input">
+    <button class="btnAdd">Add</button>
+    <button class="btnSave hide" >Save</button>
+    <ul>
+        <!-- <li>
+            <span>Task1</span>
+            <button>Edit</button>
+            <button>Del</button>
+        </li> -->
+        <!-- <li></li> -->
+    </ul>
+
+    <script>
+        function createElement(tag, innerHTML, className) {
+            const ele = document.createElement(tag);
+            if (className) {
+                ele.className = className;
+            }
+            if (innerHTML) {
+                ele.innerHTML = innerHTML;
+            }
+            return ele;
+        }
+
+        const btnAdd = document.querySelector('.btnAdd');
+        const btnSave = document.querySelector('.btnSave');
+        const input = document.querySelector('.input');
+        const ul = document.querySelector('ul');
+        // const btnDel = document.querySelector('.del');
+
+        btnAdd.addEventListener('click', function () {
+            const li = createElement('li');
+            const span = createElement('span', input.value);
+            const btnEdit = createElement('button', 'Edit');
+            const btnDel = createElement('button', 'Del');
+
+            li.append(span);
+            li.append(btnEdit);
+            li.append(btnDel);
+
+            ul.append(li);
+
+            btnEdit.addEventListener('click', function () {
+                // const newValue = prompt('Enter new value');
+                // this.previousElementSibling.innerHTML = newValue;
+                input.value = this.previousElementSibling.innerHTML;
+                btnAdd.classList.toggle('hide');
+                const currentSpan = this.previousElementSibling;
+                btnSave.classList.toggle('hide');
+                btnSave.onclick = function(){
+                    currentSpan.innerHTML = input.value;
+                    btnAdd.classList.toggle('hide');
+                    btnSave.classList.toggle('hide');
+                    input.value='';
+                }
+                
+            })
+
+            btnDel.addEventListener('click', function () {
+                // this.parentElement.remove();
+                this.closest('li').remove();
+            });
+
+
+        })
+    </script>
+
+</body>
+
+</html>

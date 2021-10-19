@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jame Pizza! Just Order it!</title>
+</head>
+<style>
+    table{
+        border: 1px solid black;
+        width:50%;
+    }
+
+    th{
+        border: 1px solid black;
+        width:50%;
+    }
+    
+    td{
+        border: 1px solid black;
+        width:50%;
+    }
+
+</style>
+<body>
+
+   
+        
+        <caption>Order Pizza Here!</caption>
+        <table>
+        <tr>
+            <th colspan="2">Pizza Shop 2.0</th>
+        </tr>
+
+        <tr>
+            <td width="33%">Name</td>
+            <td width="66%"><form><input type="text" id="fname" name="fname"></form></td>
+        </tr>
+
+        <tr>
+            <td width="33%">Pizza Topping</td>
+            <td width="66%">
+                <input type="radio" id="supreme" name="topping" value="supreme">
+                <label for="sepreme">Supreme</label><br>
+                <input type="radio" id="vegetarian" name="Topping" value="vegetarian">
+                <label for="vegetarian">Vegetatian</label><br>
+                <input type="radio" id="hawaiian" name="topping" value="hawiian">
+                <label for="Hawaiian">Hawaiian</label>
+            </td>
+            
+        </tr>
+
+        <tr>
+            <td width="33%">Pizza Sauce</td>
+            <td width="66%">
+                <label for="sauce">Choose Sauce:</label>
+                <select id="sauce" name="sauce">
+                  <option value="Tomato">Tomato</option>
+                  <option value="Spicy">Spicy</option>
+                  <option value="Sweet">Sweet</option>
+                  <option value="Curry">Curry</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td width="33%">Optional Extras</td>
+            <td width="66%">
+                <form>
+                <input type="checkbox" id="cheese" name="cheese" value="ans_cheese">
+                <label for="Extra Cheese"> Extra Cheese</label><br>
+                <input type="checkbox" id="gluten" name="gluten" value="ans_gluten">
+                <label for="Gluten Free Base"> Gluten Free Base</label><br>
+              </form></td>
+        </tr>
+
+        <tr>
+            <td >Delivery Instructions<br>     
+            <textarea name="message" rows="10" cols="30"></textarea>
+                             
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <form>
+                    <input type="submit" value="Send My Order">
+                </form>
+            </td>
+        </tr>
+
+
+
+
+    </table>
+    
+</body>
+</html>

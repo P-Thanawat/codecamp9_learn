@@ -1,0 +1,79 @@
+/* Destructuring */
+
+// Object Destructuring 
+
+// Practice 1 
+const myObject = {
+  name : "pavit",
+  surname : "pimchanagul",
+  nickname : "v"
+}
+
+// Before ES6
+// let name = myObject.name
+// let surname = myObject.surname
+// let nickname = myObject.nickname
+
+//  warning  ชื่อ key ต้องตรง
+// const {name,surname,nickname} = myObject
+// console.log(nickname)
+
+// const {nixkname} = myObject
+// console.log(nixkname) // undefined
+
+// Practice 2 : กำหนดชื่อตัวแปรใหม่ ตอนDestructure
+
+// const {name:x,surname:y,nickname:z} = myObject
+// let x = myObject.name
+// let y = myObject.surname
+// let z = myObject.nickname
+// console.log(z)
+
+
+// Practice 3 : Nested Object 
+
+const nest = {
+  start : {x:5,y:6},
+  end : {x:7,y:-9}
+}
+
+const { start: {x:startX,y:startY} } = nest
+// startX = 5
+// startY = 6
+
+// console.log(startY)
+
+
+// Array -- Index ต้องตรง
+// Practice 1 : Assign Variable from Arrays
+
+const arr = [1,2,3,4,5,6]
+// const [q,x, , , ,r] = arr
+
+// console.log(x)
+
+// Practice 2 : With ... Rest Operator
+
+// const [q,r,...Arg] = [1,2,3,4,5,6,7,8,9,10]
+
+// console.log(q)
+// console.log(r)
+// console.log(Arg)
+
+// In React 
+
+const profileUpdate = (object) => {
+  const {name , surname , nickname} = object
+  
+  
+  console.log(name)
+  console.log(surname)
+  console.log(nickname)
+}
+
+profileUpdate(myObject)
+
+
+
+
+

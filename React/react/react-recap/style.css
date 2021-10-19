@@ -1,0 +1,10 @@
+.mydiv{
+    outline:3px dashed burlywood;
+    width:250px;
+    /* height:500px; */
+    background-color: lightgray;
+    display:flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
